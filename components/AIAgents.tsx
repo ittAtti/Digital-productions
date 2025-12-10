@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { generateAgentContent } from '../services/geminiService';
 import { AgentTask, AgentStatus } from '../types';
@@ -37,6 +37,10 @@ export const AIAgents: React.FC = () => {
   ]);
 
   const runAgent = async (taskId: string) => {
+    // Prevent running if already active to avoid duplicate requests
+    const currentTask = tasks.find(t => t.id === taskId);
+    if (currentTask?.status === AgentStatus.THINKING || currentTask?.status === AgentStatus.GENERATING) return;
+
     setTasks(prev => prev.map(t => t.id === taskId ? { ...t, status: AgentStatus.THINKING } : t));
 
     const task = tasks.find(t => t.id === taskId);
@@ -60,6 +64,14 @@ export const AIAgents: React.FC = () => {
       setTasks(prev => prev.map(t => t.id === taskId ? { ...t, status: AgentStatus.ERROR } : t));
     }
   };
+
+  // Auto-start the first agent after a short delay to create "Nonstop" activity feel
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      runAgent('task1');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="py-20 px-6 bg-white border-y border-muted">
