@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina | AI Consultancy & Digital Assets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              bg: 'var(--bg)',
+              panel: 'var(--panel)',
+              primary: 'var(--primary)',
+              secondary: 'var(--secondary)',
+              accent: 'var(--accent)',
+              'accent-hover': 'var(--accent-hover)',
+              muted: 'var(--muted)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Lime-Brown Theme Variables */
+        /* Soft Ash/Near-White Base */
+        --bg: #F5F5F0; 
+        /* Pure White for panels */
+        --panel: #FFFFFF;
+        /* Deep Brownish Grey for text */
+        --primary: #4A4036; 
+        /* Lighter Brown/Taupe for secondary text */
+        --secondary: #78716C;
+        /* Lime Green Accent */
+        --accent: #84CC16; 
+        /* Darker Lime for hover states */
+        --accent-hover: #65A30D;
+        /* Muted border colors */
+        --muted: #E7E5E4;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.32.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.1/client",
+    "react-dom": "https://esm.sh/react-dom@^19.2.1",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react/jsx-runtime": "https://esm.sh/react@^19.2.1/jsx-runtime",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
