@@ -1,4 +1,4 @@
-import { Product } from './types';
+import { Product } from './types.ts';
 
 export const STRIPE_CHECKOUT_URL = "https://buy.stripe.com/test_eVq5kCfUW55C0LXduf4ZG00";
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Product, CartItem } from '../types.ts';
-import { PRODUCTS, STRIPE_CHECKOUT_URL } from '../constants.ts';
+import { Product, CartItem } from '../types';
+import { PRODUCTS, STRIPE_CHECKOUT_URL } from '../constants';
 
 // Icons
 const ShoppingBagIcon = () => (

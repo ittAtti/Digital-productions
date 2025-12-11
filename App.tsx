@@ -1,7 +1,7 @@
 import React from 'react';
-import { Store } from './components/Store';
-import { AIAgents } from './components/AIAgents';
-import { STRIPE_CHECKOUT_URL } from './constants';
+import { Store } from './components/Store.tsx';
+import { AIAgents } from './components/AIAgents.tsx';
+import { STRIPE_CHECKOUT_URL } from './constants.ts';
 
 // --- Shared Components (Nav, Hero, Process, About, Footer) ---
 

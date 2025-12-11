@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { generateAgentContent } from '../services/geminiService.ts';
-import { AgentTask, AgentStatus } from '../types.ts';
-import { AGENT_PROMPTS } from '../constants.ts';
+import { generateAgentContent } from '../services/geminiService';
+import { AgentTask, AgentStatus } from '../types';
+import { AGENT_PROMPTS } from '../constants';
 
 const SparkleIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-accent"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"></path></svg>
