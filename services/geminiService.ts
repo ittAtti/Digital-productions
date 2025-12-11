@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
-// Safely access process.env for browser compatibility
-const apiKey = (typeof process !== 'undefined' && process.env && process.env.API_KEY) || '';
+// In the Vite build process, process.env.API_KEY is replaced with the string value from your environment variables.
+// We remove the 'typeof process' check because 'process' is not defined in the browser, but the string replacement still happens.
+// @ts-ignore
+const apiKey = process.env.API_KEY || '';
 
 // Initialize Gemini Client
 // Note: In a production environment, you should proxy these requests through a backend

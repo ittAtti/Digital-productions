@@ -127,7 +127,7 @@ export const AIAgents: React.FC = () => {
                 {task.status === AgentStatus.THINKING && (
                   <div className="space-y-2 animate-pulse font-mono">
                     <div className="flex items-center gap-2 text-accent">
-                        <span>> Analyzing input parameters...</span>
+                        <span>&gt; Analyzing input parameters...</span>
                     </div>
                     <div className="h-2 bg-gray-700 rounded w-3/4"></div>
                     <div className="h-2 bg-gray-700 rounded w-1/2"></div>
